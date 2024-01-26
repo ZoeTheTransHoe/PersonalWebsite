@@ -17,10 +17,6 @@ a{
   color: #C9CDFC;  
 }  
 
-h1 { 
-  font-size: 1.05em ;
-}
-
 .navBarItem {
   display: inline;
   background-color: #080808;
@@ -44,9 +40,9 @@ h1 {
 }
 
 html *{
-   font-size: 1.05em ;
-   color: #ffc0cb !important;
+   color: #ffc0cb ;
    font-family: "Cantarell";
+   font-size: 1.2rem;
    src: url("/Cantarell/cantarell-regular-webfont.woff") format("woff");
 }
 
@@ -54,7 +50,7 @@ html *{
   width: 60px;
 }
 
-code {
+.code {
   font-size: larger;
   font-family: monospace;
 
@@ -64,20 +60,31 @@ code {
   }
 }
 
-.cursor {
+cursor {
   animation: cursor var(--cursor-fade-animation) infinite;
 }
 
-@keyframes cursor {
+@keyframes cursowor {
   0% {
-    opacity: 0;
-  }
-
-  50% {
     opacity: 1;
   }
-
-  to {
+  50% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+.categoryHeader {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.categoryHeaderIcon {
+  width: 2.5em;
+}
+
+.gitLinks {
+  text-align: center;
 }

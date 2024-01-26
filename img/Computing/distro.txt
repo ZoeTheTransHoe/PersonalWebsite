@@ -6,4 +6,5 @@ Debian
 
 KDE Project
 GNOME Project 
+Sway Project 
 The Linux Experiment
