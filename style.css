@@ -60,7 +60,7 @@ html *{
   }
 }
 
-cursor {
+.fakeCursor {
   animation: cursor var(--cursor-fade-animation) infinite;
 }
 
