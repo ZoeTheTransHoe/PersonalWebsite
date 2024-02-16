@@ -13,7 +13,7 @@ body {
 
 }
 
-.mainContent {
+main {
   max-width: calc(100% - 300px); 
   margin: 120px auto;
 }
@@ -44,11 +44,10 @@ a{
   width: 100%;
 }
 
-html *{
+html {
    color: #ffc0cb ;
-   font-family: "Cantarell";
+   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
    font-size: 1.2rem;
-   src: url("/Cantarell/cantarell-regular-webfont.woff") format("woff");
 }
 
 .navBarIcon{
@@ -93,4 +92,14 @@ html *{
 
 .gitLinks {
   text-align: center;
+}
+
+footer {
+	overflow: hidden;
+	background-color:#2A2A2A ;
+	text-align: center;
+	font-size: var(--font-size-smaller);
+	grid-column: full-width;
+	display: grid;
+	grid-template-columns: subgrid;
 }
