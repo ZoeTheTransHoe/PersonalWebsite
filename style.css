@@ -99,4 +99,6 @@ footer {
 	background-color:#2A2A2A ;
 	text-align: center;
 	font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
 }
