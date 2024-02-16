@@ -87,7 +87,7 @@ html {
 }
 
 .categoryHeaderIcon {
-  width: 2.5em;
+  width: 1.2em;
 }
 
 .gitLinks {
@@ -98,8 +98,5 @@ footer {
 	overflow: hidden;
 	background-color:#2A2A2A ;
 	text-align: center;
-	font-size: var(--font-size-smaller);
-	grid-column: full-width;
-	display: grid;
-	grid-template-columns: subgrid;
+	font-size: 0.9rem;
 }
