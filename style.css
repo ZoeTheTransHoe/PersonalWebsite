@@ -16,6 +16,9 @@ body {
 main {
   max-width: calc(100% - 300px); 
   margin: 120px auto;
+  min-height: 100vh;    
+  display: flex;
+  flex-direction: column;
 }
 
 a{  
@@ -99,7 +102,6 @@ footer {
 	background-color:#2A2A2A ;
 	text-align: center;
 	font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  margin-top: auto;
 }

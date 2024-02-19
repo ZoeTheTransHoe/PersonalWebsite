@@ -4,6 +4,13 @@
     grid-column: auto;
     padding: 10px;   
 }
+.distroListImage {
+    width: 6em;
+}
+
+.distroListBlurb {
+    font-size: 0.5em;
+}
 
 .grid-item {
     padding: 20px;
