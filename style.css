@@ -10,11 +10,10 @@ body {
   --global-fade-animation: 0.25s;
   --cursor-fade-animation: 1s;
   --separator-color: gray;
-
 }
 
 main {
-  max-width: calc(100% - 300px); 
+  max-width: calc(100% - 600px);
   margin: 120px auto;
   min-height: 100vh;    
   display: flex;
@@ -35,7 +34,6 @@ a{
 .navBarButton{
   text-decoration: none;
   background-color: #b66a77;
-  
 }
 
 .navBar {
@@ -50,11 +48,11 @@ a{
 html {
    color: #ffc0cb ;
    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-   font-size: 1.2rem;
+   font-size: 1.6rem;
 }
 
 .navBarIcon{
-  width: 60px;
+  width: 70px;
 }
 
 .code {
@@ -104,4 +102,16 @@ footer {
 	font-size: 0.9rem;
   width: 100%;
   margin-top: auto;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    max-width: calc(100%);
+  }
+  .navBarIcon{
+    width: 50px;
+  }
+  html {
+    font-size: 1.2em;
+  }
 }

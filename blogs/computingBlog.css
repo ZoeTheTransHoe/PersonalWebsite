@@ -1,19 +1,112 @@
-.distroList {
+.grid-distros {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: auto 300px 12em;
+  justify-content: space-evenly;
+}
+
+.grid-distros > div {
+    text-align: center;
+}
+
+.distroImage {
+    width: 8em;
+    height: 8em;
+}  
+
+.name {
+    font-size: 1.7em;
+    margin: 0px;
+    font-weight: bold;
+} 
+
+.blurb {
+    font-size: 22px;
+    height: 200px;
+    width: 200px;
+}
+
+.grid-projects {
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-rows: auto 180px auto;
+    justify-content: space-evenly;      
+}
+
+.grid-projects > div {
+    text-align: center;
+}
+
+.projectImage {
+    width: 8em;
+    height:10em;
+}  
+
+.grid-specs {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: auto 300px 12em;
+    justify-content: space-evenly;
+  }
+  
+.grid-specs > div {
+      text-align: center;
+}
+
+.specs-Image {
+    width: 8em;
+    height: 8em;
+} 
+
+.subCategory-specs-image {
+    width: 3em;
+    height: 3em;
+} 
+
+.grid-youtubers {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-column: auto;
-    padding: 10px;   
-}
-.distroListImage {
-    width: 6em;
-}
-
-.distroListBlurb {
-    font-size: 0.5em;
-}
-
-.grid-item {
-    padding: 20px;
-    font-size: 30px;
+    justify-content: space-evenly;
+    gap: 10px; 
     text-align: center;
+}
+
+  @media screen and (max-width: 900px) {
+    .distroImage {
+        width: 12em;
+        height: auto;
+    }   
+    .grid-distros {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+
+    .blurb {
+        font-size: 18px;
+        margin-bottom: 80px;
+        height: auto;
+        width: auto;
+    }
+
+    .projectImage {
+        width: 12em;
+        height: auto;
+    } 
+
+    .grid-projects {
+        display: grid;
+        grid-template-columns: 200px ;
+        grid-template-rows: auto;
+        gap: 10px;
+        padding: 10px;
+        justify-content: space-evenly;      
+    }
+    .distroName {
+        font-size: 2em;
+        margin: 0px;
+    }
   }
