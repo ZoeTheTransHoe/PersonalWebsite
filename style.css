@@ -109,29 +109,28 @@ footer {
   margin-top: auto;
 }
 
-.animal {
-    
-}
-
 .animalContentContainerLeft {
   display: grid;
-  grid-template-columns: 600px 1400px;
+  grid-template-columns: 40% 60%;
   column-gap: 5px;
-  width: 2000px;
+  max-width: 1500px;
+  min-width: 1130px;
 }
 
 .animalContentContainerLeftVertical {
   grid-template-columns: 750px 1250px;
   display: grid;
   column-gap: 5px;
-  width: 2000px;
+  max-width: 1500px;
+  min-width: 1130px;
 }
 
 .animalContentContainerRight {
   display: grid;
-  grid-template-columns: 900px 600px;
+  grid-template-columns: 60% 40%;
   column-gap: 5px;
-  width: 1500px;
+  max-width: 1500px;
+  min-width: 1130px;
 }
 
 .animalContentContainerRightVertical {
@@ -162,4 +161,9 @@ footer {
 .plushieImgHorizontal {
   width:600px; 
   height:450px;
+}
+
+ul {
+  line-height:160%;
+  list-style-type:disc;
 }
