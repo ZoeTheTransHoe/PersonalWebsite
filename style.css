@@ -33,7 +33,10 @@ a{
 
 .navBarButton{
   text-decoration: none;
-  background-color: #b66a77;
+  background-color: #eba5b1;
+  background-size: 100;
+  border-radius: 10px 10px 10px 10px;
+  display: inline-block;
 }
 
 .navBar {
@@ -109,49 +112,30 @@ footer {
   margin-top: auto;
 }
 
-.animalContentContainerLeft {
-  display: grid;
-  grid-template-columns: 40% 60%;
+.animalContentContainer 
+{
   column-gap: 5px;
-  max-width: 1500px;
+  max-width: 1200px;
   min-width: 1130px;
+  display: grid;
+}
+
+.animalContentContainerLeft {
+  
+  grid-template-columns: 40% 60%;
 }
 
 .animalContentContainerLeftVertical {
-  grid-template-columns: 750px 1250px;
-  display: grid;
-  column-gap: 5px;
-  max-width: 1500px;
-  min-width: 1130px;
+  grid-template-columns: 60% 40%;
 }
 
 .animalContentContainerRight {
-  display: grid;
   grid-template-columns: 60% 40%;
-  column-gap: 5px;
-  max-width: 1500px;
-  min-width: 1130px;
 }
 
 .animalContentContainerRightVertical {
-  grid-template-columns: 750px 1250px;
-  display: grid;
-  column-gap: 5px;
-  width: 2000px;
+  grid-template-columns: 60% 40%;
 }
-
-@media screen and (max-width: 900px) {
-  main {
-    max-width: calc(100%);
-  }
-  .navBarIcon{
-    width: 50px;
-  }
-  html {
-    font-size: 1.2em;
-  }
-}
-
 
 .plushieImgVerical {
   width:450px; 
@@ -166,4 +150,41 @@ footer {
 ul {
   line-height:160%;
   list-style-type:disc;
+}
+
+@media screen and (max-width: 1500px) {
+  .plushieImgVerical {
+    width:300px; 
+    height:400px;
+  }
+
+  .plushieImgHorizontal {
+    width:400px; 
+    height:300px;
+  }
+
+  .animalContentContainer {
+    max-width: 1000px;
+    min-width: 800px;
+  }
+
+  .navBarIcon{
+    width: 60px;
+  }
+
+  html {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    max-width: calc(100%);
+  }
+  .navBarIcon{
+    width: 50px;
+  }
+  html {
+    font-size: 1.2em;
+  }
 }

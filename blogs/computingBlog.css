@@ -44,18 +44,19 @@
 
 .grid-specs {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: auto 300px 12em;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 300px calc(auto + 100px);
     justify-content: space-evenly;
-  }
+}
   
 .grid-specs > div {
-      text-align: center;
+    text-align: center;
+    outline-color: #ffc0cb;
 }
 
 .specs-Image {
-    width: 8em;
-    height: 8em;
+    width: 2em;
+    height: 2em;
 } 
 
 .subCategory-specs-image {
