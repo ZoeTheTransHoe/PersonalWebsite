@@ -10,14 +10,17 @@ body {
   --global-fade-animation: 0.25s;
   --cursor-fade-animation: 1s;
   --separator-color: gray;
+  margin-left: 0px;
+  
 }
 
 main {
-  max-width: calc(100% - 600px);
+  max-width: calc(100% - 900px);
   margin: 120px auto;
   min-height: 100vh;    
   display: flex;
   flex-direction: column;
+  align-self: center;
 }
 
 a{  
@@ -154,6 +157,16 @@ footer {
 ul {
   line-height:160%;
   list-style-type:disc;
+}
+
+.pageText {
+  align-self: center;
+}
+
+.infoElement {
+  background-color: #555b64;
+  width: calc(100% / 2);
+  /* border-radius: 20px; */
 }
 
 @media screen and (max-width: 1500px) {
