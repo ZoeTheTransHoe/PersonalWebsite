@@ -51,7 +51,6 @@
   
 .grid-specs > div {
     text-align: center;
-    outline-color: #ffc0cb;
 }
 
 .specs-Image {
@@ -72,6 +71,10 @@
     text-align: center;
 }
 
+.ytvideo {
+    width:400px;
+    height:315px;
+}
   @media screen and (max-width: 900px) {
     .distroImage {
         width: 12em;
@@ -106,8 +109,26 @@
         padding: 10px;
         justify-content: space-evenly;      
     }
+
+    .grid-youtubers {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .youtuberElement {
+        margin-left: 10px;
+    }
     .distroName {
         font-size: 2em;
         margin: 0px;
+    }
+
+    .grid-specs {
+        overflow:scroll;
+        justify-content:left;
+    }
+
+    .ytvideo {
+        width:360px;
+        height:315px;
     }
   }

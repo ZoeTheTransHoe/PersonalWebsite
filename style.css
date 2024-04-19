@@ -164,12 +164,18 @@ ul {
 }
 
 .infoElement {
-  background-color: #555b64;
-  width: calc(100% / 2);
-  /* border-radius: 20px; */
+  background-color: #333538;
+  border-radius: 12px ;
+  margin: 5px;
+  padding: 1px 0px 1px 20px;
 }
 
-@media screen and (max-width: 1500px) {
+.infoBox {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width: 1500px) {  
   .plushieImgVerical {
     width:300px; 
     height:400px;
@@ -195,6 +201,10 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
+  .infoBox {
+    display: grid;
+    grid-template-columns: 100%;
+  }
   main {
     max-width: calc(100%);
   }
