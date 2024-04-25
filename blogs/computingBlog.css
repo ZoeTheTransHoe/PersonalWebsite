@@ -76,6 +76,11 @@
     height:315px;
 }
   @media screen and (max-width: 900px) {
+    .animalContentContainer
+    {
+        display: grid;
+        grid-template-columns: auto;
+    }
     .distroImage {
         width: 12em;
         height: auto;

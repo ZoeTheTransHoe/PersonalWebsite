@@ -201,6 +201,14 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
+<<<<<<< Updated upstream
+=======
+  .animalContentContainer{
+      display: grid;
+      grid-template-columns: auto;
+      width: 100%;
+  }
+>>>>>>> Stashed changes
   .infoBox {
     display: grid;
     grid-template-columns: 100%;
