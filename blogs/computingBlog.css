@@ -50,7 +50,7 @@
     width: 150px;
 }
   
-.grid-specs > div {
+.grid-specs > tr {
     text-align: center;
 }
 
