@@ -18,6 +18,8 @@
     font-size: 1.7em;
     margin: 0px;
     font-weight: bold;
+    flex: 1; /* additionally, equal width */
+    padding: 1em;   
 } 
 
 .blurb {
@@ -43,10 +45,9 @@
 }  
 
 .grid-specs {
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px 200px 200px;
-    grid-template-rows: 300px calc(auto + 100px);
-    justify-content: space-evenly;
+    display: table;
+    table-layout: fixed;
+    width: 150px;
 }
   
 .grid-specs > div {
@@ -74,6 +75,11 @@
 .ytvideo {
     width:400px;
     height:315px;
+}
+
+.element {
+    flex: 1; /* additionally, equal width */
+    padding: 1em; 
 }
   @media screen and (max-width: 900px) {
     .animalContentContainer
