@@ -54,9 +54,11 @@ a{
 }
 
 html {
-   color: #ffc0cb ;
-   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-   font-size: 1.6rem;
+  color: #ffc0cb ;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(0.8rem, 0.45rem + 17.5vw, 1.15rem);
+  --font-size-bigger: 1.25em;
+  --font-size-smaller: 0.85em; 
 }
 
 .navBarIcon{
@@ -175,6 +177,40 @@ ul {
   grid-template-columns: 50% 50%;
 }
 
+.coverArt {
+  width:270px; 
+  height:270px;
+  display: block;
+  height: auto;
+}
+
+.mediaTitle {
+  background-color: #333538;
+  padding-block: 12px;
+  text-align: center;
+  position: absolute;
+  transform: translate(0%, -100%);
+  /* content: ''; */
+  display: block;
+  width: 270px;
+}
+
+.mediaILike {
+  align-items: center;
+  width: fit-content;
+}
+
+.media {
+  padding-bottom: 200px;
+}
+
+.media > table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 2em 5em;
+}
+
 @media screen and (max-width: 1500px) {  
   .plushieImgVerical {
     width:300px; 
@@ -196,7 +232,7 @@ ul {
   }
 
   html {
-    font-size: 1.1em;
+    font-size: clamp(0.8rem, 0.45rem + 17.5vw, 1.15rem);
   }
 }
 
