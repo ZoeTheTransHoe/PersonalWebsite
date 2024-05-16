@@ -236,6 +236,18 @@ ul {
   }
 }
 
+@media screen and (max-width: 1700px) {
+  main {
+    max-width: calc(70%);
+  }
+  .navBarIcon{
+    width: 50px;
+  }
+  html {
+    font-size: 1.2em;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .infoBox {
     display: grid;
