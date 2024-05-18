@@ -2,27 +2,32 @@
 <html>
 <head>
   <title>Home Page</title>
-  <link rel="stylesheet" type="text/css" href="style.css"> 
-
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css"> 
 </head>
 
-<div class="navBar">
-    <nav>
-      
-      <a class="navBarButton" href="/index.html"><img src="/navBar/user-home-symbolic.svg" class="navBarIcon"></a>
-      <!-- Home -->
-
-      <a class="navBarButton" href="/blogs/newArticles.html"><img src="/navBar/note2-symbolic.svg" class="navBarIcon"></a>
-      <!-- GNOME Projects -->
-    
-      <a class="navBarButton" href="/blogs/computingBlog.html"><img src="/navBar/computer-symbolic.svg" class="navBarIcon"></a>
-      <!-- General Computer Blog -->
-
-      <a class="navBarButton" href="/blogs/plushieBlog.html"><img src="/navBar/bear-symbolic.svg" class="navBarIcon"></a>
-      <!-- Plushie Blog -->
-
-      <a class="navBarButton" href="/blogs/whoami.html"><img src="/navBar/person-symbolic.svg"  class="navBarIcon"></a>
-      <!-- Personal Life --> 
-
-    </nav>
+<nav class="navBar">
+  <!-- Home -->
+  <div class="navBarButton">
+    <a href="/index.html"><p class="navBarText"><img src="/navBar/user-home-symbolic.svg" class="navBarIcon"> Home </p></a>
   </div>
+  
+  <!-- My Articles  -->
+  <div class="navBarButton">
+    <a href="/blogs/newArticles.html"><p class="navBarText"><img src="/navBar/note2-symbolic.svg" class="navBarIcon">Articles</p></a> 
+  </div>
+
+  <!-- Computing -->
+  <div class="navBarButton">
+    <a href="/blogs/computingBlog.html"><p class="navBarText"><img src="/navBar/computer-symbolic.svg" class="navBarIcon"> Computing </p></a>
+  </div>
+
+  <!-- Plushie Blog -->
+  <div class="navBarButton">
+    <a href="/blogs/plushieBlog.html"><p class="navBarText"><img src="/navBar/bear-symbolic.svg" class="navBarIcon"> My Plushies </p></a>
+  </div>
+
+  <!-- Personal Life -->
+  <div class="navBarButton">
+    <a href="/blogs/whoami.html"><p class="navBarText"><img src="/navBar/person-symbolic.svg" class="navBarIcon"> About Me </p></a>
+  </div>
+</nav>

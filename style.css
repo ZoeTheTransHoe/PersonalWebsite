@@ -27,31 +27,9 @@ a{
   color: #C9CDFC;  
 }  
 
-.navBarItem {
-  display: inline;
-  background-color: #080808;
-  list-style-type: none;
-  padding: 0;
-}
 
-.navBarButton{
+.navBarButton > a {
   text-decoration: none;
-  background-color: #eba5b1;
-  background-size: 100;
-  border-radius: 10px 10px 10px 10px;
-  display: inline-block;
-}
-
-.navBar {
-  background-color: #ffc0cb;
-  text-align: center;
-  position: fixed;
-  display: inline;
-  top: 0;
-  padding-top: 12px;
-  padding-bottom: 8px;
-  width: 100%;
-  order: -5;
 }
 
 html {
@@ -62,18 +40,11 @@ html {
   --font-size-smaller: 0.85em; 
 }
 
-.navBarIcon{
-  width: 70px;
-}
+
 
 .code {
   font-size: larger;
   font-family: monospace;
-
-  &.highlighter-rouge {
-    padding: 1.5px;
-    border-radius: 6px;
-  }
 }
 
 .cursor {
@@ -196,15 +167,11 @@ ul {
   border-radius: 24px;
 }
 
-.media {
-  padding-bottom: 200px;
-}
-
 .media > table {
   margin-left: auto;
   margin-right: auto;
   border-collapse: separate;
-  border-spacing: 2em 5em;
+  border-spacing: 2em 0.8em;
   width: 200px;
 }
 
