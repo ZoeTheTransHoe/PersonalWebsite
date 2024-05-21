@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>/articlesPublic/</loc>
+    </url>
+    <url>
+        <loc>/articlesPublic/blog/</loc>
+    </url>
+    <url>
+        <loc>/articlesPublic/blog/blog/</loc>
+        <lastmod>2019-11-27</lastmod>
+    </url>
+    <url>
+        <loc>/articlesPublic/blog/blog2/</loc>
+        <lastmod>2019-11-27</lastmod>
+    </url>
+</urlset>

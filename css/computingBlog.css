@@ -5,7 +5,6 @@
     justify-content: space-evenly;
   }
   
-<<<<<<< HEAD
   .grid-distros > div {
       text-align: center;
   }
@@ -44,14 +43,15 @@
   }  
   
   .grid-specs {
-      display: grid;
-      grid-template-columns: 200px 200px 200px 200px 200px 200px;
-      grid-template-rows: 300px calc(auto + 100px);
-      justify-content: space-evenly;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: separate;
+      border-spacing: 2em 1em;
   }
-    
-  .grid-specs > div {
-      text-align: center;
+
+  .spec {
+    width: 16%;
+    align-items: center;
   }
   
   .specs-Image {
@@ -138,88 +138,3 @@
           height:315px;
       }
     }
-=======
-.grid-specs > div {
-    text-align: center;
-}
-
-.specs-Image {
-    width: 2em;
-    height: 2em;
-} 
-
-.subCategory-specs-image {
-    width: 3em;
-    height: 3em;
-} 
-
-.grid-youtubers {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    gap: 10px; 
-    text-align: center;
-}
-
-.ytvideo {
-    width:400px;
-    height:315px;
-}
-  @media screen and (max-width: 900px) {
-    .distroImage {
-        width: 12em;
-        height: auto;
-    }   
-    .grid-distros {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        gap: 10px;
-        padding: 10px;
-        justify-content: space-evenly;
-    }
-
-    .blurb {
-        font-size: 18px;
-        margin-bottom: 80px;
-        height: auto;
-        width: auto;
-    }
-
-    .projectImage {
-        width: 12em;
-        height: auto;
-    } 
-
-    .grid-projects {
-        display: grid;
-        grid-template-columns: 200px ;
-        grid-template-rows: auto;
-        gap: 10px;
-        padding: 10px;
-        justify-content: space-evenly;      
-    }
-
-    .grid-youtubers {
-        display: grid;
-        grid-template-columns: auto;
-    }
-    .youtuberElement {
-        margin-left: 10px;
-    }
-    .distroName {
-        font-size: 2em;
-        margin: 0px;
-    }
-
-    .grid-specs {
-        overflow:scroll;
-        justify-content:left;
-    }
-
-    .ytvideo {
-        width:360px;
-        height:315px;
-    }
-  }
->>>>>>> parent of f4339be (Yeah)

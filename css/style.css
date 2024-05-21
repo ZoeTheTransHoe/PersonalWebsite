@@ -27,50 +27,24 @@ a{
   color: #C9CDFC;  
 }  
 
-.navBarItem {
-  display: inline;
-  background-color: #080808;
-  list-style-type: none;
-  padding: 0;
-}
 
-.navBarButton{
+.navBarButton > a {
   text-decoration: none;
-  background-color: #eba5b1;
-  background-size: 100;
-  border-radius: 10px 10px 10px 10px;
-  display: inline-block;
-}
-
-.navBar {
-  background-color: #ffc0cb;
-  text-align: center;
-  position: fixed;
-  display: inline;
-  top: 0;
-  padding-top: 12px;
-  padding-bottom: 8px;
-  width: 100%;
 }
 
 html {
-   color: #ffc0cb ;
-   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-   font-size: 1.6rem;
+  color: #ffc0cb ;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(0.8rem, 0.45rem + 17.5vw, 1.15rem);
+  --font-size-bigger: 1.25em;
+  --font-size-smaller: 0.85em; 
 }
 
-.navBarIcon{
-  width: 70px;
-}
+
 
 .code {
   font-size: larger;
   font-family: monospace;
-
-  &.highlighter-rouge {
-    padding: 1.5px;
-    border-radius: 6px;
-  }
 }
 
 .cursor {
@@ -165,7 +139,7 @@ ul {
 
 .infoElement {
   background-color: #333538;
-  border-radius: 12px ;
+  border-radius: 24px ;
   margin: 5px;
   padding: 1px 0px 1px 20px;
 }
@@ -175,6 +149,33 @@ ul {
   grid-template-columns: 50% 50%;
 }
 
+/* Media I Like */
+.coverArt {
+  width:240px; 
+  height:240px; 
+  height: auto;
+  border-radius: 24px;
+}
+
+.mediaILike {
+  align-items: center;
+  width: fit-content;
+  background-color: #333538;
+  text-align: center; 
+  width: 270px;
+  padding: 24px 20px 1px 20px;
+  border-radius: 24px;
+}
+
+.media > table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 2em 0.8em;
+  width: 200px;
+}
+
+/* Adapting Elements To Smaller Screen Sizes */
 @media screen and (max-width: 1500px) {  
   .plushieImgVerical {
     width:300px; 
@@ -196,7 +197,19 @@ ul {
   }
 
   html {
-    font-size: 1.1em;
+    font-size: clamp(0.8rem, 0.45rem + 17.5vw, 1.15rem);
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  main {
+    max-width: calc(70%);
+  }
+  .navBarIcon{
+    width: 50px;
+  }
+  html {
+    font-size: 1.2em;
   }
 }
 
@@ -213,5 +226,34 @@ ul {
   }
   html {
     font-size: 1.2em;
+  }
+
+  /* Media I Like */
+  .coverArt {
+    width: 80px;
+    height: 80px;
+    float: right;    
+  }
+
+  .mediaILike {
+    align-items: center;
+    width: calc(fit-content + 100px);
+    background-color: #333538;
+    border-radius: 12px ;
+    margin: 5px;
+    padding: 10px 20px 1px 20px;
+  }
+
+  .media {
+    padding-bottom: 5px;
+  }
+
+  .media > table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 2em 5em;
+    overflow:scroll;
+    justify-content:left;
   }
 }
