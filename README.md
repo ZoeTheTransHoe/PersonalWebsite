@@ -3,9 +3,11 @@
 
 How To Update Website On Blogs Written Here 
 
-```toolbox enter zola
+```
+toolbox enter zola
 cd /home/zoey/Documents/GitHub/PersonalWebsite/myarticles_zola
-zola build --output-dir ~/Documents/GitHub/PersonalWebsite/articlesPublic --force```
+zola build --output-dir ~/Documents/GitHub/PersonalWebsite/articlesPublic --force
+```
 
 TODO (Blogs)
 - Add CSS To Make Landing Page Look Better
