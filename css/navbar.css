@@ -34,21 +34,27 @@
     float: left;
   } 
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1400px) {
     /* NavBar */
     .navBar {
+
     }
     
     .navBarText {
+      font-size: 0px;
     }
     
     .navBarButton {
         height: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
     
     .navBarIcon{
+      
     } 
-    
-    .navBarButton > a {
-    }
   }

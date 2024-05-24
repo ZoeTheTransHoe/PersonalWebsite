@@ -40,8 +40,6 @@ html {
   --font-size-smaller: 0.85em; 
 }
 
-
-
 .code {
   font-size: larger;
   font-family: monospace;
@@ -93,40 +91,6 @@ footer {
   padding-right: 16px;
 }
 
-.animalContentContainer 
-{
-  column-gap: 5px;
-  max-width: 1200px;
-  min-width: 1130px;
-  display: grid;
-}
-
-.animalContentContainerLeft {
-  
-  grid-template-columns: 40% 60%;
-}
-
-.animalContentContainerLeftVertical {
-  grid-template-columns: 60% 40%;
-}
-
-.animalContentContainerRight {
-  grid-template-columns: 60% 40%;
-}
-
-.animalContentContainerRightVertical {
-  grid-template-columns: 60% 40%;
-}
-
-.plushieImgVerical {
-  width:450px; 
-  height:600px;
-}
-
-.plushieImgHorizontal {
-  width:600px; 
-  height:450px;
-}
 
 ul {
   line-height:160%;
@@ -149,32 +113,6 @@ ul {
   grid-template-columns: 50% 50%;
 }
 
-/* Media I Like */
-.coverArt {
-  width:240px; 
-  height:240px; 
-  height: auto;
-  border-radius: 24px;
-}
-
-.mediaILike {
-  align-items: center;
-  width: fit-content;
-  background-color: #333538;
-  text-align: center; 
-  width: 270px;
-  padding: 24px 20px 1px 20px;
-  border-radius: 24px;
-}
-
-.media > table {
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: separate;
-  border-spacing: 2em 0.8em;
-  width: 200px;
-}
-
 /* Adapting Elements To Smaller Screen Sizes */
 @media screen and (max-width: 1500px) {  
   .plushieImgVerical {
@@ -192,10 +130,6 @@ ul {
     min-width: 800px;
   }
 
-  .navBarIcon{
-    width: 60px;
-  }
-
   html {
     font-size: clamp(0.8rem, 0.45rem + 17.5vw, 1.15rem);
   }
@@ -204,9 +138,6 @@ ul {
 @media screen and (max-width: 1700px) {
   main {
     max-width: calc(70%);
-  }
-  .navBarIcon{
-    width: 50px;
   }
   html {
     font-size: 1.2em;
@@ -221,39 +152,7 @@ ul {
   main {
     max-width: calc(100%);
   }
-  .navBarIcon{
-    width: 50px;
-  }
   html {
     font-size: 1.2em;
-  }
-
-  /* Media I Like */
-  .coverArt {
-    width: 80px;
-    height: 80px;
-    float: right;    
-  }
-
-  .mediaILike {
-    align-items: center;
-    width: calc(fit-content + 100px);
-    background-color: #333538;
-    border-radius: 12px ;
-    margin: 5px;
-    padding: 10px 20px 1px 20px;
-  }
-
-  .media {
-    padding-bottom: 5px;
-  }
-
-  .media > table {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: separate;
-    border-spacing: 2em 5em;
-    overflow:scroll;
-    justify-content:left;
   }
 }
