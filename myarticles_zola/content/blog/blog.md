@@ -1,6 +1,6 @@
 +++
 title = "My First Blog With Zola! 5 Reasons I Love Plasma And GNOME"
-date = 2019-11-27
+date = 2024-05-21
 +++
 
 Hi! This is my first blog post I will ever write on this god forsaken website. 

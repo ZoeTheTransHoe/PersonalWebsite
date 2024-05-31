@@ -55,3 +55,9 @@
       width: 2.58em;
     } 
   }
+
+  @media screen and (max-width: 390px) {
+    .navBarIcon{
+      width: 2.04em;
+    } 
+  }
