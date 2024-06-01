@@ -3,7 +3,7 @@ title = "How I Setup Gentoo KDE/Windows 10 Dualboot."
 date = 2024-05-28
 +++
 
-I recently got a new SSD for my Elitebook 820. While it did run Debian 12 before on its archaic 320GB Spinning SSD, the new SSD should modernise it and make it.
+I recently got a new SSD for my Elitebook 820. While it did run Debian 12 before on its archaic 320GB Spinning HDD, the new SSD should modernise it and make it.
 So whats more taxing for this computer and me than running a bloated OS and an OS you have to compile everything for (including sanity)? Using both at the same time! 
 
 This blog will entail the steps I took to dualboot Windows 10 and Gentoo Linux, using the KDE Desktop Environment, on Systemd with Flatpak, Wayland and Pipewire/Portals support.
