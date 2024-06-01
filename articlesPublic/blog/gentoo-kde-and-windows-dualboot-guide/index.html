@@ -60,7 +60,7 @@
   How I Setup Gentoo KDE&#x2F;Windows 10 Dualboot.
 </h1>
 <p class="subtitle"><strong>2024-05-28</strong></p>
-<p>I recently got a new SSD for my Elitebook 820. While it did run Debian 12 before on its archaic 320GB Spinning SSD, the new SSD should modernise it and make it.
+<p>I recently got a new SSD for my Elitebook 820. While it did run Debian 12 before on its archaic 320GB Spinning HDD, this new SSD should modernize it and make it.
 So whats more taxing for this computer and me than running a bloated OS and an OS you have to compile everything for (including sanity)? Using both at the same time! </p>
 <p>This blog will entail the steps I took to dualboot Windows 10 and Gentoo Linux, using the KDE Desktop Environment, on Systemd with Flatpak, Wayland and Pipewire/Portals support.</p>
 <img class="images large_image" src="../../../img/Articles/Blog3/gentoo-windows-dualboot.png">
@@ -72,7 +72,7 @@ For this demonstration, I will be installing Gentoo/Windows onto my HP Elitebook
     <li>GPU: Intel HD 4400</li>
     <li>Drive Space: 120GB SSD</li>
 </ul>
-<h1> Preparatons </h1>
+<h1> Preparations </h1>
 To start, you will need 3 things downloaded from another computer.
 <ol>
     <li> A Windows 10 ISO. This can be obtained from <a href="https://www.microsoft.com/en-us/software-download/windows10%20"> Microsoft's Offical Website. </a> </li>
@@ -81,17 +81,17 @@ To start, you will need 3 things downloaded from another computer.
 </ol>
 <p>Once you have obtained all of these files, we can get started!</p>
 <h1> Getting Setup </h1>
-<p>The next steps is getting Ventoy setup. This will slightly differe on if you are on Windows Or Linux. If you already know how to use Ventoy you can skip to here.</p>
+<p>The next steps is getting Ventoy setup. This will slightly difference on if you are on Windows Or Linux. If you already know how to use Ventoy you can skip to here.</p>
 <h2> Linux </h2>
 <ol>
     <li> Download the Linux tar.gz from <a class="https://sourceforge.net/projects/ventoy/files/v1.0.98/">here</a></li>
     <li> Extract the file once it is done downloading, and enter the extracted file created. It should look something like this.</li>
     <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_174730.png">
-    <li> Run the file named "VentoyGUI.x86_64". You may need to make it executable, which can be done by right clicking on it and checking its properites if you are using GNOME or KDE, or running the following command:</li>
+    <li> Run the file named "VentoyGUI.x86_64". You may need to make it executable, which can be done by right clicking on it and checking its properties if you are using GNOME or KDE, or running the following command:</li>
     <div class="codePadding"> <code>sudo chmod +x ./VentoyGUI.x86_64</code> </div>
     <li> In the following window, select your USB stick in the button labelled 1, and click "Install" on the button labelled 2. Press OK on the following two windows that popup.</li>
     <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180037.png">
-    <li> Now Ventoy Is Installed, navigate to the new partition named "Ventoy", and place both the Windows and Gentoo ISOs in this partiton. Once they are added, remove the USB drive from your computer and place it into the system you wish to install the two OSes onto. </li>
+    <li> Now Ventoy Is Installed, navigate to the new partition named "Ventoy", and place both the Windows and Gentoo ISOs in this partition. Once they are added, remove the USB drive from your computer and place it into the system you wish to install the two OSes onto. </li>
     <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180450.png">
     <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180455.png">
 </ol>
@@ -119,11 +119,11 @@ To start, you will need 3 things downloaded from another computer.
     <img class="images" src="../../../img/Articles/Blog3/3.PNG">
     <li> Untick "Turn on fast start-up" and Save Changes</li>
 </ol>
-<p>Before we head into Gentoo, we need to shrink Windows 10s parition so we have room to install Gentoo onto.</p>
+<p>Before we head into Gentoo, we need to shrink Windows 10s partition so we have room to install Gentoo onto.</p>
 <ol>
     <li> Search For "Disk Management" in the search bar.</li>
     <img class="images" src="../../../img/Articles/Blog3/4.PNG">
-    <li> Left-Click on your Windows 10 C: Partiton, and press shrink volume </li>
+    <li> Left-Click on your Windows 10 C: Partition, and press shrink volume </li>
     <img class="images" src="../../../img/Articles/Blog3/5.PNG">
     <li> Enter in your desired size in MBs of your Gentoo Partition.</li>
     <li> Once shrunk, you should have your C drive and some free space - it should look something like the below:</li>
@@ -132,9 +132,9 @@ To start, you will need 3 things downloaded from another computer.
 <p>Now, Windows is setup and configured correctly, its time for the fun part!</p>
 <h1> Gentoo Time! </h1>
 <p>Reboot your machine back into Ventoy, and load into the Gentoo Live USB. The rest of this guide will be written in mind that you are using the Gentoo Live USB.</p>
-<p>When prompted, enter in the keycode for your specicifc keymap (for me, that is uk), and wait for Gentoo to load up and you get into a shell prompt.</p>
+<p>When prompted, enter in the keycode for your specific keymap (for me, that is uk), and wait for Gentoo to load up and you get into a shell prompt.</p>
 <h2> Set Up Internet Access </h2>
-If you are on ethernet, you can skip this step. However, for my fellow wifi enthusaist, follow the following steps to get connected to your wifi network.
+If you are on ethernet, you can skip this step. However, for my fellow wifi enthusiast, follow the following steps to get connected to your wifi network.
 <ol>
     <li> Run the following command to find your wifi card.
     <div class="codePadding"> <code>livecd ~ # iwconfig</code></div> 
@@ -145,23 +145,23 @@ If you are on ethernet, you can skip this step. However, for my fellow wifi enth
     <li> Add your wifi networks credentials using this command, replacing YOUR_WIFI_NETWORK with your wifi network's ESSID, and YOUR_WIFI_PASSWORD with the password of your network.
     <div class="codePadding"><code>livecd ~ # wpa_passphrase YOUR_WIFI_NETWORK YOUR_WIFI_PASSWORD | tee /etc/wpa_supplicant.conf</code></div></li>
     <li> Connect to your wifi network using the following command replacing "YOUR_WIFI_INTERFACE_HERE" with your interface name.
-     <div class="codePadding"><code>livecd ~ # wpa_supplicant -B -c /etc/wpa_supplicant.conf -i YOUR_WIFI_INTERFACE_HERE</code></div> It should spit out <div class="codePadding"><code>Successfully initalized wpa_supplicant</code></div></li>
+     <div class="codePadding"><code>livecd ~ # wpa_supplicant -B -c /etc/wpa_supplicant.conf -i YOUR_WIFI_INTERFACE_HERE</code></div> It should spit out <div class="codePadding"><code>Successfully initialized wpa_supplicant</code></div></li>
     <li> Done! Run a Ping command to ensure you can access the outside world.  <div class="codePadding"><code>livecd ~ # ping google.com</code></div> </li>
 </ol>
 <p>Now, lets jump into the main cheese and biscuits. Grab some cheese and biscuits actually, and get comfortable, this is gonna be a long process. </p>
 <p>Most of this will be ripped from the <a src="https://wiki.gentoo.org/wiki/Handbook:AMD64"> Gentoo Wiki.</a>. However, this guide will be a more focused, full guide to get from TTY &gt; Full KDE Desktop will all the trimmings, while dualbooting Windows, compared to the Gentoos wiki being more generic. You are free to use either wikis, or both.</p>
 <p>Lets get started!</p>
 <h2> Prepare Disks! </h2>
-<p>Run the following to get the storage devices detected by the system - make double sure you pick out the drive that corrosponds to the drive you want to install Gentoo onto!</p>
+<p>Run the following to get the storage devices detected by the system - make double sure you pick out the drive that corresponds to the drive you want to install Gentoo onto!</p>
 <div class="codePadding"><code>livecd ~ # lsblk</code></div> 
-This drive will usually be /dev/sda or /dev/nvme01. Run the following to start the paritioning tool, replacing MY_DRIVE with the drive you wish to install Gentoo Linux onto. 
+This drive will usually be /dev/sda or /dev/nvme01. Run the following to start the partitioning tool, replacing MY_DRIVE with the drive you wish to install Gentoo Linux onto. 
 <div class="codePadding"><code>livecd ~ # cfdisk MY_DRIVE</code></div> </li>
-<p>Create Two New Patitions in the empty space we created in Windows before hand.:
+<p>Create Two New Partitions in the empty space we created in Windows before hand.:
 <ul>
 <li> Swap Partition, about the same size as RAM.</li>
 <li> Root Partition, rest of the disk</li>
 </ul></p>
-<p>Make the swap partiton a Swap type, and write and quit cfdisk.Once back in the terminal prompt, run lsblk again to identify which partiton is the swap and root, and note this down - it'll come in handy a lot later! </p>
+<p>Make the swap partition a Swap type, and write and quit cfdisk.Once back in the terminal prompt, run lsblk again to identify which partition is the swap and root, and note this down - it'll come in handy a lot later! </p>
 <div class="codePadding"><code>livecd ~ # lsblk</code></div></li>
 <p>Run the following three commands to format the two new parititons and setup swap </p>
 <div class="codePadding"><code>livecd ~ # mkfs.ext4 /dev/YOUR_ROOT</code></div>
@@ -172,7 +172,7 @@ This drive will usually be /dev/sda or /dev/nvme01. Run the following to start t
 <p>Change into the directory of your new mounted root</p>
 <div class="codePadding"><code>livecd ~ # cd /mnt/gentoo</code></div></li>
 <h2> Installing Stage3 </h2>
-<p>Now we can install the Stage3 tarball, that will contain the foundation of our new Gentoo install. There are many foundations - those who want no desktop, or looking to run a desktop, those wanting to use a different init system or CPU architecures e.t.c. For this guide, we want a desktop on systemd and AMD64. To get the latest tarball, we can go over to <a href="https://www.gentoo.org/downloads/">https://www.gentoo.org/downloads/</a>, and copy the link on &quot;Stage3 desktop profile | systemd.&quot;</p>
+<p>Now we can install the Stage3 tarball, that will contain the foundation of our new Gentoo install. There are many foundations - those who want no desktop, or looking to run a desktop, those wanting to use a different init system or CPU architectures e.t.c. For this guide, we want a desktop on systemd and AMD64. To get the latest tarball, we can go over to <a href="https://www.gentoo.org/downloads/">https://www.gentoo.org/downloads/</a>, and copy the link on &quot;Stage3 desktop profile | systemd.&quot;</p>
 <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240528_200200.png">
 <p>Back in our terminal, we will paste in the following command to grab us this tarball, where STAGE3_DOWNLOAD_LINK is the link we copied from earlier.</p>
 <div class="codePadding"><code>livecd ~ # wget STAGE3_DOWNLOAD_LINK</code></div>
@@ -184,14 +184,14 @@ This drive will usually be /dev/sda or /dev/nvme01. Run the following to start t
 <p>Now the fun (and slightly long) part - copy in the next command to extract the stage3 file.</p>
 <div class="codePadding"><code>livecd ~ # tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner</code></div>
 <h2> Configuring Compilation </h2>
-<p>Now, we can start editing the big important make.conf file - the file that dicatate how the software we download later will be compiled. Make sure you take care editing this file! 
+<p>Now, we can start editing the big important make.conf file - the file that dictate how the software we download later will be compiled. Make sure you take care editing this file! 
 Open up the file using whatever text editor you desire- I will use Vi, but if you hate God you can use Emacs or Nano.</p>
 <div class="codePadding"><code>livecd ~ # vi /mnt/gentoo/etc/portage/make.conf</code></div>
 <p>In COMMON_FLAGS, add the following:</p>
 <div class="codePadding"><code>COMMON_FLAGS="-march=native -O2 -pipe"</code></div>
 <p>MAKEOPTS will define how many threads will be used to compile our software - a good rule of thumb is for the number of jobs is either the number of threads in your PC or the amount of memory in GBs you have divide by 2, whichever is lower.  The load-average will be the job count + 2. </p>
 <p>On my machine, I will have 4 threads and 8GBs, so will make my job count 4 and my load count 6, for example.</p>
-<p>Add the following line to your make.conf, substiuting 4 and 6 with the appropriate number of jobs/load averages for your machine:</p>
+<p>Add the following line to your make.conf, substituting 4 and 6 with the appropriate number of jobs/load averages for your machine:</p>
 <div class="codePadding"><code>MAKEOPTS="-j4 -l6"</code></div>
 <p>Save and exit the file. Lets move onto the next step!</p>
 <h2> Entering New System </h2>
@@ -205,7 +205,7 @@ Open up the file using whatever text editor you desire- I will use Vi, but if yo
 <div class="codePadding"><code>livecd / # source /etc/profile  </code></div>
 <div class="codePadding"><code>livecd / # export PS1="(chrOwOt) ${PS1}" </code></div>
 <h2> Preparing Bootloader </h2>
-<p>These steps will be different if your system is either UEFI (has an EFI partition) or Legacy BIOS (doesnt have an EFI partition). My machine is so ancient it uses Legacy BIOS, but for conviences sake I will leave both sets of commands needed to mount the boot</p>
+<p>These steps will be different if your system is either UEFI (has an EFI partition) or Legacy BIOS (doesn't have an EFI partition). My machine is so ancient it uses Legacy BIOS, but for conviences sake I will leave both sets of commands needed to mount the boot</p>
 <h3> UEFI Systems </h3>
 <div class="codePadding"><code>livecd / # mkdir /efi  </code></div>
 <div class="codePadding"><code>livecd / # mount /dev/EFI_PARTITON /efi  </code></div>
@@ -234,7 +234,7 @@ To set the USE flags, open the make.conf file again.</p>
 <div class="codePadding"><code>ACCEPT_LICENSE="*"</code></div>
 <p>Now, lets update emerge to make use of all of these lovely new flags. This will take a long time, especially since - it took me around 8 hours on my shitty Elitebook!</p>
 <div class="codePadding"><code>livecd / # emerge --ask --verbose --update --deep --newuse @world</code></div>
-<p>Then remove uneeded dependecies by running the following</p>
+<p>Then remove unneeded dependencies by running the following</p>
 <div class="codePadding"><code>livecd / # emerge --depclean </code></div>
 <h2> Configuring Locales / Keymaps </h2>
 <p>First, lets configure which time zone we are in. First, lets check the timezone file to see what options we have.</p>
@@ -254,7 +254,7 @@ en_GB ISO-8859-1
 <p>Now update your new locales.</p>
 <div class="codePadding"><code>livecd / # env-update && source /etc/profile && export PS1="(chrOwOt) ${PS1}"</code></div>
 <h2> Installing a Kernel. </h2>
-<p>While we have a lot of usefull tools so far, we are missing the most important of all - the kernel! While we could congifure our own kernel and you are more than welcome to do so, for this guide I will fall back and use the binary kernel for the sake of time.</p>
+<p>While we have a lot of useful tools so far, we are missing the most important of all - the kernel! While we could configure our own kernel and you are more than welcome to do so, for this guide I will fall back and use the binary kernel for the sake of time.</p>
 <p>First, download the firmware needed by the kernel:</p>
 <div class="codePadding"><code>livecd / # emerge --ask linux-firmware sof-firmware</code></div>
 <p>For Intel CPUs, download microcode updates too:</p>
@@ -262,7 +262,7 @@ en_GB ISO-8859-1
 <p>Now, lets install the Kernel</p>
 <div class="codePadding"><code>livecd / # emerge --ask gentoo-kernel-bin</code></div>
 <h2>  Configuring filesystems. </h2>
-<p>While we could manually edit our own fstab (the parititons Linux will automount while booting) ourselves, we could nab the <a href="https://github.com/glacion/genfstab">tool</a> Arch Linux uses to do this automatically for its install guide.</p>
+<p>While we could manually edit our own fstab (the partitions Linux will automount while booting) ourselves, we could nab the <a href="https://github.com/glacion/genfstab">tool</a> Arch Linux uses to do this automatically for its install guide.</p>
 <p>First, download git so we can download the fstab generation script from GitHub</p>
 <div class="codePadding"><code>livecd / # emerge --ask dev-vcs/git</code></div>
 <p>Now clone the git repo that contains genfstab</p>
@@ -277,14 +277,14 @@ Change to a different TTY (Ctrl + Alt + F2) and the following command
 <div class="codePadding"><code>livecd / # systemd-machine-id-setup</code></div>
 <div class="codePadding"><code>livecd / # systemd-firstboot --prompt</code></div>
 <div class="codePadding"><code>livecd / # systemctl preset-all --preset-mode=enable-only</code></div>
-<p>To make using the terminal slightly more tollerable later, we can download auto-completion tools for our shell, bash.</p>
+<p>To make using the terminal slightly more tolerable later, we can download auto-completion tools for our shell, bash.</p>
 <div class="codePadding"><code>livecd / # emerge --ask bash-completion</code></div>
 <p>To enable time sync using systemd, run the following command</p>
 <div class="codePadding"><code>livecd / # systemctl enable systemd-timesyncd.service</code></div>
 <p>Other useful tools we can download now includes udev-rules for dealing with some storage device types, and wpa_supplicant so we have a fallback to connect to the interent later.</p>
 <div class="codePadding"><code>livecd / # emerge --ask iw wpa_supplicant io-scheduler-udev-rules</code></div>
 <h2>  Configuring the bootloader </h2>
-<p>This step will be slightly different depening on if you are using BIOS or UEFI systems. </p>
+<p>This step will be slightly different deepening on if you are using BIOS or UEFI systems. </p>
 <p>If you are on UEFI, run the following command (BIOS Chads do not need to do this.)</p>
 <div class="codePadding"><code>livecd / # echo 'GRUB_PLATFORMS="efi-64"' >> /etc/portage/make.conf</code></div>
 <p>Both UEFI and BIOS users, run the following command to grab grub and os-prober.</p>
