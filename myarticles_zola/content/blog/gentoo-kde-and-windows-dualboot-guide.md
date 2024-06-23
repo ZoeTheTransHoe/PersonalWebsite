@@ -8,7 +8,7 @@ So whats more taxing for this computer and me than running a bloated OS and an O
 
 This blog will entail the steps I took to dualboot Windows 10 and Gentoo Linux, using the KDE Desktop Environment, on Systemd with Flatpak, Wayland and Pipewire/Portals support.
 
-<img class="images large_image" src="../../../img/Articles/Blog3/gentoo-windows-dualboot.png">
+<img class="images large_image" src="../../../myarticles_zola/static/img/Articles/Blog3/gentoo-windows-dualboot.png">
 
 <h1> The Specimen </h1>
 For this demonstration, I will be installing Gentoo/Windows onto my HP Elitebook G820. The Specs Are:
@@ -38,26 +38,26 @@ The next steps is getting Ventoy setup. This will slightly difference on if you 
 <ol>
     <li> Download the Linux tar.gz from <a class="https://sourceforge.net/projects/ventoy/files/v1.0.98/">here</a></li>
     <li> Extract the file once it is done downloading, and enter the extracted file created. It should look something like this.</li>
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_174730.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_174730.png">
     <li> Run the file named "VentoyGUI.x86_64". You may need to make it executable, which can be done by right clicking on it and checking its properties if you are using GNOME or KDE, or running the following command:</li>
     <div class="codePadding"> <code>sudo chmod +x ./VentoyGUI.x86_64</code> </div>
     <li> In the following window, select your USB stick in the button labelled 1, and click "Install" on the button labelled 2. Press OK on the following two windows that popup.</li>
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180037.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_180037.png">
     <li> Now Ventoy Is Installed, navigate to the new partition named "Ventoy", and place both the Windows and Gentoo ISOs in this partition. Once they are added, remove the USB drive from your computer and place it into the system you wish to install the two OSes onto. </li>
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180450.png">
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180455.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_180450.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_180455.png">
 </ol>
 
 <h2> Windows </h2>
 <ol>
     <li> Download the Windows zip from <a class="https://sourceforge.net/projects/ventoy/files/v1.0.98/">here.</a></li>
     <li> Extract the file once it is done downloading, and enter the extracted file created. It should look something like this.</li>
-    <img class="images" src="../../../img/Articles/Blog3/Untitled.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Untitled.png">
     <li> Run the file named "Ventoy2Disk" . UAC will prompt you if you want to run the app.</li>
     <li> In the following window, select your USB stick in the button list at the top and click "Install" at the bottom. Press OK on the following two windows that popup.</li>
-    <img class="images" src="../../../img/Articles/Blog3/8.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/8.PNG">
     <li> Now Ventoy Is Installed, navigate to the new partition named "Ventoy", which should be your D:\ or similar, and then place both the Windows and Gentoo ISOs in this partiton. Once they are added, remove the USB drive from your computer and place it into the system you wish to install the two OSes onto. </li>
-    <img class="images" src="../../../img/Articles/Blog3/9.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/9.PNG">
 </ol>
 
 Once Ventoy Is Installed, Boot up the target machine and boot into the Ventoy USB using your computers boot menu. Navigate down to the Windows ISO using the arrow keys and press enter twice. Now go ahead and get Windows 10 installed. Do not attempt to rush ahead and install Gentoo first, it is much less hassle and headache to install Windows 10 first then install Gentoo (this really goes for dualbooting any Windows and Linux).
@@ -68,24 +68,24 @@ Once Windows 10 is installed, make sure to disable fast boot as it can mess with
 
 <ol>
     <li> Search For "Edit Power Plan" in the search bar. </li>
-    <img class="images" src="../../../img/Articles/Blog3/Capture.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Capture.PNG">
     <li> Go To "Power Options" in the top bar </li>
     <li> Click "Choose what the power buttons do" </li>
-    <img class="images" src="../../../img/Articles/Blog3/2.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/2.PNG">
     <li> Click on "Change Settings that are currently unavailable </li>
-    <img class="images" src="../../../img/Articles/Blog3/3.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/3.PNG">
     <li> Untick "Turn on fast start-up" and Save Changes</li>
 </ol>
 
 Before we head into Gentoo, we need to shrink Windows 10s partition so we have room to install Gentoo onto.
 <ol>
     <li> Search For "Disk Management" in the search bar.</li>
-    <img class="images" src="../../../img/Articles/Blog3/4.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/4.PNG">
     <li> Left-Click on your Windows 10 C: Partition, and press shrink volume </li>
-    <img class="images" src="../../../img/Articles/Blog3/5.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/5.PNG">
     <li> Enter in your desired size in MBs of your Gentoo Partition.</li>
     <li> Once shrunk, you should have your C drive and some free space - it should look something like the below:</li>
-    <img class="images" src="../../../img/Articles/Blog3/6.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/6.PNG">
 </ol>
 
 Now, Windows is setup and configured correctly, its time for the fun part!
@@ -151,7 +151,7 @@ Change into the directory of your new mounted root
 
 Now we can install the Stage3 tarball, that will contain the foundation of our new Gentoo install. There are many foundations - those who want no desktop, or looking to run a desktop, those wanting to use a different init system or CPU architectures e.t.c. For this guide, we want a desktop on systemd and AMD64. To get the latest tarball, we can go over to [https://www.gentoo.org/downloads/](https://www.gentoo.org/downloads/), and copy the link on "Stage3 desktop profile | systemd."
 
-<img class="images" src="../../../img/Articles/Blog3/Screenshot_20240528_200200.png">
+<img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240528_200200.png">
 
 Back in our terminal, we will paste in the following command to grab us this tarball, where STAGE3_DOWNLOAD_LINK is the link we copied from earlier.
 <div class="codePadding"><code>livecd ~ # wget STAGE3_DOWNLOAD_LINK</code></div>
@@ -424,7 +424,7 @@ Finally, add Flathub to your flatpak repos so you can use flatpaks.
 <div class="codePadding"><code>zoey@zelda ~ $ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></div> 
 
 Done!
-<img class="images large_image" src="../../../img/Articles/Blog3/gentoo_desktop.png">
+<img class="images large_image" src="../../../myarticles_zola/static/img/Articles/Blog3/gentoo_desktop.png">
 
 <h1>  Extras For Gentoo </h1>
 

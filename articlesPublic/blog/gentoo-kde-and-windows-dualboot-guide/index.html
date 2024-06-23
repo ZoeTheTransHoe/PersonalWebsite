@@ -5,54 +5,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MyBlog</title>
-  <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/navbar.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/articles.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/css/article_landing.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/navbar.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/articles.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/article_landing.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 
-<body>
-
-  <nav class="navBar">
+<nav class="navBar">
     <!-- Home -->
     <div class="navBarButton">
-      <a href="/index.html"><img src="/navBar/user-home-symbolic.svg" class="navBarIcon"> </a>
+      <a href="/articlesPublic/index.html"><img src="/myarticles_zola/static/img/navBar/user-home-symbolic.svg" class="navBarIcon"> </a>
       <p class="navBarText"> Home </p>
     </div>
     
     <!-- My Articles  -->
     <div class="navBarButton">
-      <a href="/articlesPublic/blog/"><img src="/navBar/note2-symbolic.svg" class="navBarIcon"></a> 
+      <a href="/articlesPublic/blog/index.html"><img src="/myarticles_zola/static/img/navBar/note2-symbolic.svg" class="navBarIcon"></a> 
       <p class="navBarText">Articles</p>
     </div>
   
     <!-- Computing -->
     <div class="navBarButton">
-      <a href="/htmlPages/computingBlog.html"><img src="/navBar/computer-symbolic.svg" class="navBarIcon"></a>
+      <a href="/articlesPublic/mainPages/computingblog/index.html"><img src="/myarticles_zola/static/img/navBar/computer-symbolic.svg" class="navBarIcon"></a>
       <p class="navBarText">Computing</p>
     </div>
   
     <!-- Plushie Blog -->
     <div class="navBarButton">
-      <a href="/htmlPages/plushieBlog.html"><img src="/navBar/bear-symbolic.svg" class="navBarIcon"> </a>
+      <a href="/articlesPublic/mainPages/plushieblog/index.html"><img src="/myarticles_zola/static/img/navBar/bear-symbolic.svg" class="navBarIcon"> </a>
       <p class="navBarText">My Plushies </p>
     </div>
   
     <!-- Personal Life -->
     <div class="navBarButton">
-      <a href="/htmlPages/whoami.html"><img src="/navBar/person-symbolic.svg" class="navBarIcon"> </a>
+      <a href="/articlesPublic/mainPages/whoami/index.html"><img src="/myarticles_zola/static/img/navBar/person-symbolic.svg" class="navBarIcon"> </a>
       <p class="navBarText">About Me </p>
     </div>
-  </nav>
+</nav>
 
+<body>
   <main>
     <section class="section">
       <div class="container">
         <div class="catHeader">
           <p><b><code class="code" aria-hidden="true">[zoey@fedora:~]$ ls /opt/mail/blogs/*.md </code><span class="cursor">█</span></b></p>
         </div>
-        <h1 class="categoryHeader"> <img src="/img/Articles/chat-bubbles-empty-inverted-symbolic.svg" alt="Linux" class="categoryHeaderIcon" > Articles</h1>
+        <h1 class="categoryHeader"> <img src="/myarticles_zola/static/img/Articles/chat-bubbles-empty-inverted-symbolic.svg" alt="Linux" class="categoryHeaderIcon" > Articles</h1>
         
         <p> These blogs will contain the musings of a very weird old rat lady, and mabye other insightful things.</p>
         
@@ -63,7 +62,7 @@
 <p>I recently got a new SSD for my Elitebook 820. While it did run Debian 12 before on its archaic 320GB Spinning HDD, this new SSD should modernize it and make it.
 So whats more taxing for this computer and me than running a bloated OS and an OS you have to compile everything for (including sanity)? Using both at the same time! </p>
 <p>This blog will entail the steps I took to dualboot Windows 10 and Gentoo Linux, using the KDE Desktop Environment, on Systemd with Flatpak, Wayland and Pipewire/Portals support.</p>
-<img class="images large_image" src="../../../img/Articles/Blog3/gentoo-windows-dualboot.png">
+<img class="images large_image" src="../../../myarticles_zola/static/img/Articles/Blog3/gentoo-windows-dualboot.png">
 <h1> The Specimen </h1>
 For this demonstration, I will be installing Gentoo/Windows onto my HP Elitebook G820. The Specs Are:
 <ul>
@@ -86,48 +85,48 @@ To start, you will need 3 things downloaded from another computer.
 <ol>
     <li> Download the Linux tar.gz from <a class="https://sourceforge.net/projects/ventoy/files/v1.0.98/">here</a></li>
     <li> Extract the file once it is done downloading, and enter the extracted file created. It should look something like this.</li>
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_174730.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_174730.png">
     <li> Run the file named "VentoyGUI.x86_64". You may need to make it executable, which can be done by right clicking on it and checking its properties if you are using GNOME or KDE, or running the following command:</li>
     <div class="codePadding"> <code>sudo chmod +x ./VentoyGUI.x86_64</code> </div>
     <li> In the following window, select your USB stick in the button labelled 1, and click "Install" on the button labelled 2. Press OK on the following two windows that popup.</li>
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180037.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_180037.png">
     <li> Now Ventoy Is Installed, navigate to the new partition named "Ventoy", and place both the Windows and Gentoo ISOs in this partition. Once they are added, remove the USB drive from your computer and place it into the system you wish to install the two OSes onto. </li>
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180450.png">
-    <img class="images" src="../../../img/Articles/Blog3/Screenshot_20240527_180455.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_180450.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240527_180455.png">
 </ol>
 <h2> Windows </h2>
 <ol>
     <li> Download the Windows zip from <a class="https://sourceforge.net/projects/ventoy/files/v1.0.98/">here.</a></li>
     <li> Extract the file once it is done downloading, and enter the extracted file created. It should look something like this.</li>
-    <img class="images" src="../../../img/Articles/Blog3/Untitled.png">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Untitled.png">
     <li> Run the file named "Ventoy2Disk" . UAC will prompt you if you want to run the app.</li>
     <li> In the following window, select your USB stick in the button list at the top and click "Install" at the bottom. Press OK on the following two windows that popup.</li>
-    <img class="images" src="../../../img/Articles/Blog3/8.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/8.PNG">
     <li> Now Ventoy Is Installed, navigate to the new partition named "Ventoy", which should be your D:\ or similar, and then place both the Windows and Gentoo ISOs in this partiton. Once they are added, remove the USB drive from your computer and place it into the system you wish to install the two OSes onto. </li>
-    <img class="images" src="../../../img/Articles/Blog3/9.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/9.PNG">
 </ol>
 <p>Once Ventoy Is Installed, Boot up the target machine and boot into the Ventoy USB using your computers boot menu. Navigate down to the Windows ISO using the arrow keys and press enter twice. Now go ahead and get Windows 10 installed. Do not attempt to rush ahead and install Gentoo first, it is much less hassle and headache to install Windows 10 first then install Gentoo (this really goes for dualbooting any Windows and Linux).</p>
 <p>If you are reading this, I am guessing you know how to install Windows 10. Its not a pleasant installer but its easy all things considered. </p>
 <p>Once Windows 10 is installed, make sure to disable fast boot as it can mess with booting our other Linux install. This can be done by:</p>
 <ol>
     <li> Search For "Edit Power Plan" in the search bar. </li>
-    <img class="images" src="../../../img/Articles/Blog3/Capture.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Capture.PNG">
     <li> Go To "Power Options" in the top bar </li>
     <li> Click "Choose what the power buttons do" </li>
-    <img class="images" src="../../../img/Articles/Blog3/2.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/2.PNG">
     <li> Click on "Change Settings that are currently unavailable </li>
-    <img class="images" src="../../../img/Articles/Blog3/3.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/3.PNG">
     <li> Untick "Turn on fast start-up" and Save Changes</li>
 </ol>
 <p>Before we head into Gentoo, we need to shrink Windows 10s partition so we have room to install Gentoo onto.</p>
 <ol>
     <li> Search For "Disk Management" in the search bar.</li>
-    <img class="images" src="../../../img/Articles/Blog3/4.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/4.PNG">
     <li> Left-Click on your Windows 10 C: Partition, and press shrink volume </li>
-    <img class="images" src="../../../img/Articles/Blog3/5.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/5.PNG">
     <li> Enter in your desired size in MBs of your Gentoo Partition.</li>
     <li> Once shrunk, you should have your C drive and some free space - it should look something like the below:</li>
-    <img class="images" src="../../../img/Articles/Blog3/6.PNG">
+    <img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/6.PNG">
 </ol>
 <p>Now, Windows is setup and configured correctly, its time for the fun part!</p>
 <h1> Gentoo Time! </h1>
@@ -173,7 +172,7 @@ This drive will usually be /dev/sda or /dev/nvme01. Run the following to start t
 <div class="codePadding"><code>livecd ~ # cd /mnt/gentoo</code></div></li>
 <h2> Installing Stage3 </h2>
 <p>Now we can install the Stage3 tarball, that will contain the foundation of our new Gentoo install. There are many foundations - those who want no desktop, or looking to run a desktop, those wanting to use a different init system or CPU architectures e.t.c. For this guide, we want a desktop on systemd and AMD64. To get the latest tarball, we can go over to <a href="https://www.gentoo.org/downloads/">https://www.gentoo.org/downloads/</a>, and copy the link on &quot;Stage3 desktop profile | systemd.&quot;</p>
-<img class="images" src="../../../img/Articles/Blog3/Screenshot_20240528_200200.png">
+<img class="images" src="../../../myarticles_zola/static/img/Articles/Blog3/Screenshot_20240528_200200.png">
 <p>Back in our terminal, we will paste in the following command to grab us this tarball, where STAGE3_DOWNLOAD_LINK is the link we copied from earlier.</p>
 <div class="codePadding"><code>livecd ~ # wget STAGE3_DOWNLOAD_LINK</code></div>
 <p>Now, we could just assume it all downloaded properly - but lets be safe rather than sorry! Run the following command to get the SHA512 signature and compare it to the tar.xz we just downloaded. </p>
@@ -336,7 +335,7 @@ Once in KDE, you may notice there is no sound, bluetooth or networking. Dont pan
 <p>Finally, add Flathub to your flatpak repos so you can use flatpaks.</p>
 <div class="codePadding"><code>zoey@zelda ~ $ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></div> 
 <p>Done!
-<img class="images large_image" src="../../../img/Articles/Blog3/gentoo_desktop.png"></p>
+<img class="images large_image" src="../../../myarticles_zola/static/img/Articles/Blog3/gentoo_desktop.png"></p>
 <h1>  Extras For Gentoo </h1>
 <h2>  Install Hyfetch :3 </h2>
 <div class="codePadding"><code>zoey@zelda ~ $ sudo emerge --ask hyfetch</code></div> 
@@ -457,15 +456,16 @@ sys-libs/libudev-compat</code></div>
 </body>
 
 <div class="myfooter">
-  <footer> 
-      <nav>
-        <p>
-          © 2024 Zoey Ahmed and <a href="/blogs/contributers.html" target="_blank" rel="noopener noreferrer">contributors.</a> Special thank you to <a href="https://theevilskeleton.gitlab.io/" target="_blank" rel="noopener noreferrer">Hari Rana / TheEvilSkeleton</a> for their support and insight, and the <a href="https://www.gnome.org/" target="_blank" rel="noopener noreferrer">GNOME foundation</a> for providing the icons used throughout this website. 
-        </p>
-        <p>
-          <a href="https://github.com/ZoeTheTransHoe/PersonalWebsite" target="_blank" rel="noopener noreferrer">  Code</a> for the website, licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">the GPL-3</a>
-        </p>
-    </footer>
-  </div>
+    <footer> 
+        <nav>
+          <p>
+            © 2024 Zoey Ahmed and <a href="/articlesPublic/mainPages/contributers/index.html" target="_blank" rel="noopener noreferrer">contributors.</a> Special thank you to <a href="https://tesk.page/" target="_blank" rel="noopener noreferrer">Hari Rana / TheEvilSkeleton</a> for their support and insight, and the <a href="https://www.gnome.org/" target="_blank" rel="noopener noreferrer">GNOME foundation</a> for providing the icons used throughout this website. 
+          </p>
+          <p>
+            <a href="https://github.com/ZoeTheTransHoe/PersonalWebsite" target="_blank" rel="noopener noreferrer">  Code</a> for the website, licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">the GPL-3</a>
+          </p>
+      </footer>
+    </div>
+
 </html>
 

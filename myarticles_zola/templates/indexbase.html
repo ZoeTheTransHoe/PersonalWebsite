@@ -1,0 +1,27 @@
+{%- import 'macros/navBar.html' as macros_navBar -%}
+{%- import 'macros/footer.html' as macros_footer -%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyBlog</title>
+  <link href="/articlesPublic/css/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/navbar.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/articles.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/article_landing.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+{{ macros_navBar::navBar() }}
+<body>
+  <main>
+    <section class="section">
+        {% block content %} {% endblock %}
+    </section>
+  </main>
+  {{ macros_footer::footer() }}
+</body>
+
+</html>
+

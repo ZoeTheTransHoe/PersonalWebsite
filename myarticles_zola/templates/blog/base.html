@@ -1,0 +1,34 @@
+{%- import 'macros/navBar.html' as macros_navBar -%}
+{%- import 'macros/footer.html' as macros_footer -%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyBlog</title>
+  <link href="/articlesPublic/css/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/navbar.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/articles.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/articlesPublic/css/article_landing.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+{{ macros_navBar::navBar() }}
+<body>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="catHeader">
+          <p><b><code class="code" aria-hidden="true">[zoey@fedora:~]$ ls /opt/mail/blogs/*.md </code><span class="cursor">█</span></b></p>
+        </div>
+        <h1 class="categoryHeader"> <img src="/myarticles_zola/static/img/Articles/chat-bubbles-empty-inverted-symbolic.svg" alt="Linux" class="categoryHeaderIcon" > Articles</h1>
+        
+        <p> These blogs will contain the musings of a very weird old rat lady, and mabye other insightful things.</p>
+        {% block content %} {% endblock %}
+      </div>
+    </section>
+  </main>
+</body>
+{{ macros_footer::footer() }}
+</html>
+

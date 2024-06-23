@@ -14,4 +14,23 @@
         <loc>/articlesPublic/blog/test-blog/</loc>
         <lastmod>2024-05-21</lastmod>
     </url>
+    <url>
+        <loc>/articlesPublic/mainPages/</loc>
+    </url>
+    <url>
+        <loc>/articlesPublic/mainPages/computingblog/</loc>
+        <lastmod>2024-05-28</lastmod>
+    </url>
+    <url>
+        <loc>/articlesPublic/mainPages/contributers/</loc>
+        <lastmod>2024-05-28</lastmod>
+    </url>
+    <url>
+        <loc>/articlesPublic/mainPages/plushieblog/</loc>
+        <lastmod>2024-05-28</lastmod>
+    </url>
+    <url>
+        <loc>/articlesPublic/mainPages/whoami/</loc>
+        <lastmod>2024-05-28</lastmod>
+    </url>
 </urlset>
