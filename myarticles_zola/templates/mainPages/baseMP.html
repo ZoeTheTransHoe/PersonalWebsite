@@ -22,7 +22,7 @@
   <main>
     <section class="section">
       <div class="container">
-        {% set title =  get_section(path="blog/_index.md") %}
+
         {{ macros_title::title(title=title) }}
         {% block content %} {% endblock %}
       </div>
