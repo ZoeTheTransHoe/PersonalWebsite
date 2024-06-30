@@ -11,11 +11,10 @@ body {
   --cursor-fade-animation: 1s;
   --separator-color: gray;
   margin-left: 0px;
-  
 }
 
 main {
-  max-width: calc(100% - 900px);
+  max-width: 65%;
   margin: 120px auto;
   min-height: 100vh;    
 }
@@ -116,22 +115,17 @@ ul {
   html {
     font-size: clamp(0.8rem, 0.45rem + 17.5vw, 1.15rem);
   }
+  main {
+    max-width: 80%;
+  }
 }
 
-@media screen and (max-width: 1700px) {
-  main {
-    max-width: calc(70%);
-  }
-  html {
-    font-size: 1.2em;
-  }
-}
 
 @media screen and (max-width: 900px) {
-  main {
-    max-width: calc(96%);
-  }
   html {
     font-size: 1.2em;
+  }
+  main {
+    max-width: 96%;
   }
 }

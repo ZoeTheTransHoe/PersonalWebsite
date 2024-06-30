@@ -175,8 +175,4 @@ date = 2024-05-28
           <img src="/myarticles_zola/static/img/Plushies/Xenia JR.jpeg" class="plushieImgHorizontal  ">
         </div>
       </div> -->
-    </main>
-  </body>
-  <script type="text/javascript" src="/navBar/footer.js"></script>
-  <div id="myfooter"></div>
-</html> -->
+
